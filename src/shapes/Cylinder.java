@@ -1,6 +1,6 @@
 package shapes;
 
-public class Cylinder extends Shape
+public abstract class Cylinder extends Shape
 {
 	private double radius;
 	

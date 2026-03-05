@@ -1,6 +1,6 @@
 package shapes;
 
-public class Pyramid extends Shape
+public abstract class Pyramid extends Shape
 {
 	private double edgeLength; 
 	

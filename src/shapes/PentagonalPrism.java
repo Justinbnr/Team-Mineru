@@ -1,6 +1,6 @@
 package shapes;
 
-public class PentagonalPrism extends Shape
+public abstract class PentagonalPrism extends Shape
 {
 	private double edgeLength;
 	public PentagonalPrism( double height, double edgeLength) {
@@ -11,6 +11,7 @@ public class PentagonalPrism extends Shape
 	public double getBaseArea() {
 		double angleInRadians = Math.toRadians(54);
 		return (5 * Math.pow(edgeLength, 2 )* Math.tan(angleInRadians)) / 4;
+	}
 		
 	@Override
 	public double getVolume() {
@@ -18,4 +19,4 @@ public class PentagonalPrism extends Shape
 			
 		}
 	}
-}
+

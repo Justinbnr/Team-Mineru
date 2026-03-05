@@ -1,6 +1,6 @@
 package shapes;
 
-public class OctagonalPrism extends Shape
+public abstract class OctagonalPrism extends Shape
 {
 	private double edgeLenght;
 	
@@ -9,8 +9,8 @@ public class OctagonalPrism extends Shape
 		this.edgeLenght = edgeLength;
 	}
 	@Override
-	public double getBaseArea() {
-		return 2 * (1 + Math.sqrt((2) * Math.pow(edgeLenght, 2);
+	 public double getBaseArea() {
+		return 2 * (1 + Math.sqrt(2)) * Math.pow(edgeLenght, 2);
 	}
 	@Override
 	public double getVolume() {

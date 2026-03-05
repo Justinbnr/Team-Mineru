@@ -9,6 +9,7 @@ public abstract class Shape implements Comparable<Shape> {
 		return height;
 		
 	}
+	// these are here because the classes that have the getbase and getvolume should do the math for us //
 	public abstract double getBaseArea();
 	public abstract double getVolume();
 }

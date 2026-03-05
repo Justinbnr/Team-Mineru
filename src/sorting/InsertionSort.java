@@ -1,8 +1,10 @@
 package sorting;
 
+import java.util.Comparator;
+
 import shapes.Shape;
 
-public abstract class InsertionSort {
+public class InsertionSort {
 
 	public static void insertionSort (Shape[] shapes, Comparator<Shape> repo ){
 

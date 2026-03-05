@@ -1,3 +1,4 @@
+package appDomain;
 import java.util.Scanner;
 import java.io.File;
 import shapes.Cone;
@@ -10,7 +11,6 @@ import shapes.SquarePrism;
 import shapes.TriangularPrism;
 
 
-package appDomain;
 
 
 /**
@@ -46,35 +46,8 @@ public class AppDriver
 		// natural order (comparable) or other orders (comparators)
 		
 		// This is the Scanner to read the file, it will tell us how big the array is and fill it with all the shapes // 
-	public Shape[] loadFile(String fileName) throws Exception{
-		Scanner fileScanner = new Scanner(new File(fileName));
-		
-		int size = fileScanner.nextInt();
-		Shape[] allShapes = new Shape[size];
-		
-		for (int i  = 0; i < size; i++) {
-			String name = fileScanner.next();
-			double h = fileScanner.nextDouble();
-			double v = fileScanner.nextDouble();
-			
-			if (name.equalsIgnoreCase("Cone")) {
-				allShapes[i] = new Cone(h, v);
-			} else if (name.equalsIgnoreCase("Cylinder")) {
-				allShapes[i] = new Cylinder(h, v);
-			} else if (name.equalsIgnoreCase("OctagonalPrism")) {
-				allShapes[i] = new OctagonalPrism(h, v);
-			} else if (name.equalsIgnoreCase("PentagonaPrism")) {
-				allShapes [i] = new PentagonalPrism(h, v);
-			} else if (name.equalsIgnoreCase("Pyramid")) {
-				allShapes [i] = new Pyramid(h, v);
-			} else if (name.equalsIgnoreCase("SquarePrism")){
-				allShapes [i] = new SquarePrism(h, v);
-			} else if (name.equalsIgnoreCase("TriangularPrism")) {
-				allShapes [i] = new TriangularPrism(h, v);
-			}}
-		fileScanner.close();
-		return allShapes;
-		}
+	
 	}
+}
 
 
