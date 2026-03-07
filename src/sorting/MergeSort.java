@@ -36,7 +36,7 @@ public class MergeSort {
 		int k = 0;
 		
 		while (i < leftSize && j < rightSize ) {
-			if (repo.compare(leftHalf[i], rightHalf [j]) <= 0) {
+			if (repo.compare(leftHalf[i], rightHalf [j]) >= 0) {
 				shapes[k] = leftHalf[i];
 				i++;
 			}
