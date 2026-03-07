@@ -1,6 +1,10 @@
 package appDomain;
 import java.util.Scanner;
+
+import Comparators.*;
+
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Comparator;
 
 import shapes.Cone;
@@ -96,13 +100,13 @@ public class AppDriver {
         Comparator<Shape> comp = null;
         String propertyName = "";
         if (compareType == 'h') {
-            comp = new HeightComparator(); // change function name once comparator is added if necessary
+            comp = new HeightComparator();
             propertyName = "Height";
         } else if (compareType == 'v') {
-            comp = new VolumeComparator(); // change function name once comparator is added if necessary
+            comp = new VolumeComparator();
             propertyName = "Volume";
         } else if (compareType == 'a') {
-            comp = new BaseAreaComparator(); // change function name once comparator is added if necessary
+            comp = new BaseAreaComparator();
             propertyName = "Area";
         }
 
@@ -128,7 +132,7 @@ public class AppDriver {
                 sortName = "Selection";
                 break;
             case 'm':
-                MergeSort.mergeSort(shapes, comp);;
+                MergeSort.mergeSort(shapes, comp);
                 sortName = "Merge";
                 break;
             case 'q':
@@ -208,9 +212,7 @@ public class AppDriver {
 
         // print every 1000th element
         for (int k = 1000; k <= n; k += 1000) {
-            if (k < n) {
                 System.out.println(k + "-th element: " + shapes[k - 1].getClass().getName() + " " + propertyName + ": " + getPropertyValue(shapes[k - 1], compareType));
-            }
         }
 
         // print the last element
@@ -223,34 +225,12 @@ public class AppDriver {
         if (compareType == 'h') {
             return shape.getHeight();
         } else if (compareType == 'v') {
-            return shape.calcVolume();
+            return shape.getVolume();
         } else if (compareType == 'a') {
-            return shape.calcBaseArea();
+            return shape.getBaseArea();
         }
         return 0;
     }
-}
-
-        
-       
-		// TODO Auto-generated method stub
-
-		// refer to demo00 BasicFileIO.java for a simple example on how to
-		// read data from a text file
-
-		// refer to demo01 Test.java for an example on how to parse command
-		// line arguments and benchmarking tests
-
-		// refer to demo02 Student.java for comparable implementation, and
-		// NameCompare.java or GradeCompare for comparator implementations
-
-		// refer to demo02 KittySort.java on how to use a custom sorting
-		// algorithm on a list of comparables to sort using either the
-		// natural order (comparable) or other orders (comparators)
-		
-		// This is the Scanner to read the file, it will tell us how big the array is and fill it with all the shapes // 
-	
-	}
 }
 
 

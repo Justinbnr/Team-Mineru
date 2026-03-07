@@ -1,6 +1,6 @@
 package shapes;
 
-public abstract class Cone extends Shape
+public class Cone extends Shape
 {
 	private double radius;
 	

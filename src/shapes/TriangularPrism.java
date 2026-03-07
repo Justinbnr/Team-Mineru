@@ -1,6 +1,6 @@
 package shapes;
 
-public abstract class TriangularPrism extends Shape
+public class TriangularPrism extends Shape
 {
 	private double edgeLength;
 	public TriangularPrism(double height, double edgeLength) {
