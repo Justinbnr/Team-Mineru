@@ -139,8 +139,9 @@ public class AppDriver {
                 QuickSort.quickSort(shapes, comp);
                 sortName = "Quick";
                 break;
-            // add switch case for the 6th sorting method when implemented
             case 'z':
+            	HeapSort.heapSort(shapes, comp);
+            	sortName = "Heap";
                 break;
         }
 
