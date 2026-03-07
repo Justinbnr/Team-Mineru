@@ -19,7 +19,7 @@ public class BubbleSort {
 				
 			}
 		}
-	}
+	}	
 	
 	// Swap function
 	private static void swap(Shape[] shapes, int Index1, int Index2) {
